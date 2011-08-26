@@ -1,0 +1,141 @@
+a:link {color: #FFFFFF; text-decoration: none; }
+a:visited {color: #FFFFFF; text-decoration: none; }
+a:hover {color: #20ff20; text-decoration: none; }
+
+a.commandlink:link {color: #FFFFFF; text-decoration: none; border-bottom: 1px dashed #999999; }
+a.commandlink:visited {color: #FFFFFF; text-decoration: none; border-bottom: 1px dashed #999999;}
+a.commandlink:hover {color: #20ff20; text-decoration: none; border-bottom: 1px dashed #20ff20; }
+
+body, table {
+	background: #242424;
+	margin: 0px;
+	padding: 0px; 
+	font-family: "<?php echo $MiniFontName; ?>";
+	font-size: <?php echo $MiniFontSize; ?>;
+	color: #FFFFFF;
+}
+
+img {
+	border: 0;
+}
+
+.progress {
+	background: #000000;
+}
+
+.block, .top {
+	padding: 2px;
+	margin: 1px;
+	background-color: #242424;
+	border: 1px solid #474747;
+	zoom: 1.0;
+}
+
+.top {
+	font-size: <?php echo $MiniFontSize; ?>;
+	text-align: center;
+	font-weight: bold;
+}
+
+.postlog {
+	padding: 0px;
+	margin: 0px;
+	margin-top: 5px;
+	background-color: #242424;
+	border: none;
+	text-align: left;
+}
+
+.contents {
+	padding: 0px;
+	margin: 0;
+}
+
+.menu {
+	padding: 0px;
+	margin: 0px;
+	width: 270px;
+}
+
+button {
+	font-family: "<?php echo $MiniFontName; ?>";
+	font-size: <?php echo $MiniFontSize; ?>;
+}
+
+input {
+	font-family: "<?php echo $MiniFontName; ?>";
+	font-size: <?php echo $MiniFontSize; ?>;
+}
+
+.inputfile {
+	font-family: "<?php echo $MiniFontName; ?>";
+	font-size: <?php echo $MiniFontSize; ?>;
+}
+
+.inputrate {
+	font-family: "<?php echo $MiniFontName; ?>";
+	font-size: <?php echo $MiniFontSize; ?>;
+	width: <?php echo $MiniFontSize * 4; ?>;
+}
+
+.pausedgroup {
+	color: #AAAAAA;
+}
+
+.unpausedgroup {
+}
+
+.INFO, .SUCCESS {
+	color: #00BB00;
+}
+
+.DETAIL {
+	color: #00BB00;
+}
+
+.ERROR, .FAILED, .FAILURE {
+	color: red;
+}
+
+.WARNING {
+	color: magenta;
+}
+
+.DEBUG, .NONE {
+	color: gray;
+}
+
+.tableline {
+	border: none 0; 
+	border-top: 1px dashed #474747; 
+	height: 1px;
+	margin: 0px;
+}
+
+.page {
+	color: white;
+}
+
+.curpage {
+	color: #00BB00;
+}
+
+.categorycombo {
+	background-color: #242424;
+	color: white;
+	border: none 0; 
+	font-family: "<?php echo $MiniFontName; ?>";
+	font-size: <?php echo $MiniFontSize; ?>;
+}
+
+.pausedcategorycombo {
+	background-color: #242424;
+	color: #AAAAAA;
+	border: none 0; 
+	font-family: "<?php echo $MiniFontName; ?>";
+	font-size: <?php echo $MiniFontSize; ?>;
+}
+
+.date {
+	color: #AAAAAA;
+}

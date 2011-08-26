@@ -1,0 +1,129 @@
+=====================================
+           NZBGetWeb ReadMe
+=====================================
+
+Contents          
+--------
+1. About NZBGetWeb
+2. Prerequisites
+3. Installation
+4. Authors
+5. Copyright
+6. Contact
+
+=====================================
+1. About NZBGetWeb
+=====================================
+
+NZBGetWeb is a web-frontend for NZBGet-server. 
+
+NZBGetWeb is written in PHP and can be installed on any server with PHP-support.
+
+=====================================
+2. Prerequisites
+=====================================
+
+NZBGetWeb needs:
+
+ - NZBGet-server:
+    This version of NZBGetWeb (1.5-testing) requires NZBGet 0.8.0-testing.
+
+ - PHP:
+    Version 5.2 or later is recommended. For early versions additional steps
+    may be required (see Installation-section for details).
+    
+ - Web-server:
+    any server with PHP-support, for example Apache.
+
+=====================================
+3. Installation
+=====================================
+
+Extract the content of archive to any folder on your server. 
+
+Please refer to documentation of your web-server for information on how
+to enable PHP-support and to define permissions to execute scripts.
+
+Check your PHP-version. For version 5.2 or later no additional libraries
+are needed. 
+
+For early versions of PHP you need to install extensions "xml" and "xmlrpc".
+On windows the extension "xml" is always installed, the extension "XMLRPC" needs
+to be selected in Setup-program.
+On linux the extensions should be available as packages "php-xml" and 
+"php-xmlrpc". If not - you can recompile PHP with configure option 
+"--with-xmlrpc".
+
+As a last option (if you have troubles installing extensions "xml" and "xmlrpc")
+you can use the library ("XMLRPC for PHP"): download it from 
+http://phpxmlrpc.sourceforge.net/ , unpack it and put the directory "lib" 
+from the archive into the nzbgetweb-directory. However "XMLRPC for PHP" is much
+slower as the mentioned extensions, written in "C".
+
+To access nzbgetweb open url to nzbgetweb in your browser, for example:
+
+  http://localhost/nzbgetweb/index.php
+
+To open mini-theme (which is designed for devices with very small screen size,
+like mobile phones) open "mini.php" instead of "index.php":
+
+  http://localhost/nzbgetweb/mini.php
+
+NZBGetWeb will probably complain about not being able to connect to 
+NZBGet-server. Click on the link "config" (which points to 
+http://localhost/nzbgetweb/config.php) and check/change the options under
+the section "COMMUNICATION WITH NZBGET-SERVER", especially "ServerIp", 
+"ServerPort" and "ServerPassword".
+
+If you want to be able to edit configuration of NZBGet-server via web-interface 
+set the options "ServerConfigFile" and "ServerConfigTemplate". If you want
+to start and shutdown NZBGet-server via web-interface set the option
+"ServerStartCommand".
+
+If you want to be able to edit configuration of your post-processing script 
+via web-interface set the options "PostProcessConfigFile" and 
+"PostProcessConfigTemplate". Your post-processing script must support the
+configuration via web-interface. If you use the example postprocessing script
+from NZBGet's distribution (postprocess-example.sh), put the full path to
+postprocess-example.conf into both options "PostProcessConfigFile" and 
+"PostProcessConfigTemplate".
+
+If you get error messages by saving the config it is most likely a permission 
+problem. If you can't fix it, do the configuration manually: create a copy of 
+file "settings-template.php" with the name "settings.php" and edit the settings
+using a text editor. NOTE: do not delete/rename file "settings-template.php", 
+it is also neccessary.
+
+There is a possibilty to include a user definable HTML-code into web-interface.
+It will be showed below the server control box. Please see file 
+"usermenu-example.php" for an example. Rename the file to "usermenu.php" to
+activate the menu.
+
+=====================================
+4. Authors
+=====================================
+
+NZBGetWeb is based on open-source-project ZussaWeb (please visit ZussaWeb home 
+page for more info on http://sourceforge.net/projects/zussaweb).
+
+The adaptation for NZBGet-server and further development was made by
+Andrei Prygounkov (hugbug@users.sourceforge.net).
+
+=====================================
+5. Copyright
+=====================================
+
+NZBGetWeb is distributed under GNU General Pubic License Version 2.
+The complete content of license is provided in file COPYING.
+
+=====================================
+6. Contact
+=====================================
+
+If you encounter any problem, feel free to use forums on
+
+    sourceforge.net/projects/nzbget
+
+or contact me at
+
+	hugbug@users.sourceforge.net

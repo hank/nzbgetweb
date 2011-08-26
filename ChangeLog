@@ -1,0 +1,50 @@
+nzbgetweb 1.5-testing:
+  - added sorting of download queue view;
+  - added support for priorities (view and change);
+  
+nzbgetweb 1.4:
+  - added support for editing of post-processor-queue;
+  - added support for postprocessing parameters (postprocessing script must
+    support that feature too);
+  - added history view (thanks to dvbm for the patch) with ability to 
+    post-process completed items again;
+  - added customizable user menu;
+  - added option "TimeZoneCorrection" to fix unproper timezone settings;
+  - added field "Age" for groups and files;
+  - added indication of queue items with a post-processing parameter 
+    "PostProcess" set to "no" using a different color for a "wrench" icon;
+  - added option "LogFilter";
+  - added option "ServerStopCommand";
+  - added support for second pause register - command "resume (2)".
+  - changes in layout;
+  - fixed: a superfluous tag "%>" was sometimes added to configuration file when
+    saving options - reported on ARM-based platforms.
+
+nzbgetweb 1.3:
+  - added configuration page (config.php) for settings of web-interface,
+    NZBGet-server and post-processing script;
+  - added the commands to start and shutdown NZBGet-server;
+  - removed the check for file nzb-extensions by uploading files, since 
+    NZBGet can now process other files too (via nzbprocess-script);
+  - reworked the storing of settings to make the updates of web-interface
+    easier in the future (old settings can be keeped, new settings will be
+    automatically initialized with default values);
+  - the name of all settings were changed in order to be more consistent with
+    NZBGet-server (no underscores, FirstWordUpperCase);
+  - added the fetching of newzbin-reports (thanks to Phil Tolson 
+    <phil-t@users.sourceforge.net> for the patch);
+  - improved error reporting, if connection to server fails.
+
+nzbgetweb 1.2:
+  - added mini-theme (mini.php) as alternative for default theme (index.php), 
+    optimized for PDA, mobile phones and other devices with very small screen
+    and limited support for javascript.
+
+nzbgetweb 1.1:
+  - added support for categories; new option "categories";
+  - if a connection to nzbget-server cannot be established, nzbgetweb now shows
+    an appropriate error-page instead of a lot of php-errors;
+  - added the output of timestamps in log-window; new option "log_time_format";
+  
+nzbgetweb 1.0:
+  - first version;
